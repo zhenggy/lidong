@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="jdbc:mysql://localhost:3306/lidong">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/lidong/entity/Lgroup.hbm.xml</value>
+				<value>com/lidong/entity/Lmygroup.hbm.xml</value>
+				<value>com/lidong/entity/Luser.hbm.xml</value>
+				<value>com/lidong/entity/Lrundata.hbm.xml</value>
+				<value>com/lidong/entity/Lfriend.hbm.xml</value>
+				<value>com/lidong/entity/Lpm25.hbm.xml</value>
+				<value>com/lidong/entity/Lpush.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="baseDaoImpl" class="com.lidong.dao.impl.BaseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userDaoImpl" class="com.lidong.dao.impl.UserDaoImpl"
+		parent="baseDaoImpl"></bean>
+	<bean id="pushDaoImpl" class="com.lidong.dao.impl.PushDaoImpl"
+		parent="baseDaoImpl"></bean>
+	<bean id="groupDaoImpl" class="com.lidong.dao.impl.GroupDaoImpl"
+		parent="baseDaoImpl"></bean>
+	<bean id="runningDataDaoImpl" class="com.lidong.dao.impl.RunningDataDaoImpl"
+		parent="baseDaoImpl"></bean>
+
+	<bean id="baseBizImpl" class="com.lidong.biz.impl.BaseBizImpl">
+		<property name="baseDaoImpl" ref="baseDaoImpl"></property>
+	</bean>
+	<bean id="userBizImpl" class="com.lidong.biz.impl.UserBizImpl"
+		parent="baseBizImpl">
+		<property name="userDaoImpl" ref="userDaoImpl"></property>
+	</bean>
+	<bean id="pushBizImpl" class="com.lidong.biz.impl.PushBizImpl"
+		parent="baseBizImpl">
+		<property name="pushDaoImpl" ref="pushDaoImpl"></property>
+	</bean>
+	<bean id="groupBizImpl" class="com.lidong.biz.impl.GroupBizImpl"
+		parent="baseBizImpl">
+		<property name="groupDaoImpl" ref="groupDaoImpl"></property>
+	</bean>
+	<bean id="runningDataBizImpl" class="com.lidong.biz.impl.RunningDataBizImpl"
+		parent="baseBizImpl">
+		<property name="runningDataDaoImpl" ref="runningDataDaoImpl"></property>
+	</bean>
+
+	<bean id="userAction" class="com.lidong.action.UserAction" scope="prototype">
+		<property name="userBizImpl" ref="userBizImpl"></property>
+		<property name="runningDataBizImpl" ref="runningDataBizImpl"></property>
+	</bean>
+	<bean id="runningDataAction" class="com.lidong.action.RunningDataAction"
+		scope="prototype">
+		<property name="runningDataBizImpl" ref="runningDataBizImpl"></property>
+	</bean>
+
+</beans>
