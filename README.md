@@ -25,9 +25,9 @@
     MVC设计模式+SSH框架+MySQL数据库
 
 
-![欢迎界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/4665990.jpg)
-![关于我界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/69359411.jpg)
-![运动界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/35357359.jpg)
-![跑步界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/30159536.jpg)
-![资讯界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/8321184.jpg)
-![好友界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/62167392.jpg)
+![欢迎界面](/截图/1.png)
+![关于我界面](/截图/2.png)
+![运动界面](/截图/3.png)
+![跑步界面](/截图/4.png)
+![资讯界面](/截图/5.png)
+![好友界面](/截图/6.jpg)
