@@ -25,13 +25,9 @@
     MVC设计模式+SSH框架+MySQL数据库
 
 
-![欢迎界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/20782692.jpg)
-![登录注册界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/22514998.jpg)
-![关于我界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/14653372.jpg)
-![关于我界面2](http://oe6wdchwh.bkt.clouddn.com/16-9-28/9776464.jpg)
-![运动界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/62823457.jpg)
-![通知栏](http://oe6wdchwh.bkt.clouddn.com/16-9-28/86629048.jpg)
-![跑步界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/5885593.jpg)
-![好友界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/12359772.jpg)
-![资讯界面](http://oe6wdchwh.bkt.clouddn.com/16-9-28/46443451.jpg)
-![抽屉](http://oe6wdchwh.bkt.clouddn.com/16-9-28/70382245.jpg)
+![欢迎界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/4665990.jpg)
+![关于我界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/69359411.jpg)
+![运动界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/35357359.jpg)
+![跑步界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/30159536.jpg)
+![资讯界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/8321184.jpg)
+![好友界面](http://oe6wdchwh.bkt.clouddn.com/16-9-29/62167392.jpg)
